@@ -1,0 +1,160 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* variables */
+:root {
+  /* Primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --bg-headings-buttons: hsl(0, 0%, 95%);
+}
+
+/* page reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--bg-headings-buttons);
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 1.5rem;
+  color: var(--paragraphs);
+}
+
+button,
+button:focus,
+button:active {
+  border: none;
+  outline: none;
+}
+
+/* custome classes */
+.flex-cc {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-pack: center;
+}
+
+/* styles */
+main {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 5rem 3rem;
+}
+
+.cars_container {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.car {
+  padding: 3rem;
+  width: 28.5rem;
+}
+
+.car:nth-child(1) {
+  color: var(--bright-orange);
+  background-color: var(--bright-orange);
+}
+
+.car:nth-child(2) {
+  color: var(--dark-cyan);
+  background-color: var(--dark-cyan);
+}
+
+.car:nth-child(3) {
+  color: var(--very-dark-cyan);
+  background-color: var(--very-dark-cyan);
+}
+
+.car__image {
+  height: 4rem;
+  width: 6.4rem;
+  margin-bottom: 3rem;
+}
+
+.car__type {
+  margin-bottom: 3rem;
+  letter-spacing: 0.1rem;
+
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--bg-headings-buttons);
+  font-family: "Big Shoulders Display", sans-serif;
+}
+
+.car__desc {
+  margin-bottom: 3rem;
+}
+
+.car__button {
+  color: inherit;
+  cursor: pointer;
+  border-radius: 3rem;
+  background-color: var(--bg-headings-buttons);
+
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: capitalize;
+
+  padding: 1.3rem 3rem;
+}
+
+.car__button:hover {
+  padding: 1.1rem 3rem;
+  background-color: transparent;
+  color: var(--bg-headings-buttons);
+  border: 0.2rem solid var(--bg-headings-buttons);
+}
+
+@media (min-width: 768px) {
+  .cars_container {
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+  }
+
+  .car__desc {
+    margin-bottom: 8rem;
+  }
+}
